@@ -1,5 +1,5 @@
 {% set name = "starz" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/starz-{{ version }}.tar.gz
-  sha256: a0e271d722447639c05566e476d3010fd26230f3f3e59433ff5c68e5c20ec264
+  sha256: 4ee4e8f37ada9edad55353c5c1396361b2623f6213cf80fe18bdf2373a6282d5
 
 build:
   number: 0
