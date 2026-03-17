@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/starz-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/starz-{{ version }}.tar.gz
   sha256: 37ce59b7892a95ed0209d28c3e133b50d9cfab047d0ba0b5bfd625969b5d1350
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - starz=starz.__main__:main
@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - filetype
-    - python >=3.7
+    - python >={{ python_min }}
     - tqdm
 
 test:
@@ -33,6 +33,7 @@ test:
     - starz --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Semi-ATE/starz
